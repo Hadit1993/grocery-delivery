@@ -1,3 +1,5 @@
+import Banner from "../components/shared/Banner";
+
 export default function MainLayout({
   children,
 }: Readonly<{
@@ -5,7 +7,8 @@ export default function MainLayout({
 }>) {
   return (
     <>
-      <p>banner</p>
+      <Banner />
+      {/* <p>banner</p> */}
       <nav>navbar</nav>
       <main className="min-h-screen">{children}</main>
       <footer>footer</footer>
