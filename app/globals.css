@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=DM+Serif+Display:ital@0;1&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -21,11 +20,11 @@
 }
 
 body {
-  font-family: var(--font-sans);
   color: var(--color-app-text);
   background-color: var(--color-app-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
 }
 
 /* Scrollbar */
