@@ -1,4 +1,5 @@
 import Banner from "../components/shared/Banner";
+import NavBar from "../components/shared/Navbar";
 
 export default function MainLayout({
   children,
@@ -8,8 +9,7 @@ export default function MainLayout({
   return (
     <>
       <Banner />
-      {/* <p>banner</p> */}
-      <nav>navbar</nav>
+      <NavBar />
       <main className="min-h-screen">{children}</main>
       <footer>footer</footer>
       <p>Cart SideBar</p>
