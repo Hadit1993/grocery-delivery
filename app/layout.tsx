@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${vazirMatn.className}`}>
+    <html lang="fa" className={`${vazirMatn.className}`}>
       <body>
         {children}
         <Toaster position="top-right" toastOptions={toastOptions} />
