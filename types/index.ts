@@ -93,3 +93,7 @@ export interface LoginFormType {
   email: string;
   password: string;
 }
+
+export interface ProductCardProps {
+  product: Product;
+}

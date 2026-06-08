@@ -133,8 +133,8 @@ export const iconsForLeafpad = {
 export const dummyProducts = [
   {
     _id: "69c22613ae75a98c7cd13b3b",
-    name: "Butter Croissant 100g",
-    description: "Flaky and buttery",
+    name: "کروسان کره‌ای ۱۰۰ گرمی",
+    description: "لایه‌لایه و کره‌ای",
     price: 45,
     originalPrice: 50,
     image:
@@ -153,8 +153,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b37",
-    name: "Organic Quinoa 500g",
-    description: "High protein, Gluten-free",
+    name: "کینوا ارگانیک ۵۰۰ گرمی",
+    description: "پروتئین بالا، بدون گلوتن",
     price: 420,
     originalPrice: 450,
     image:
@@ -173,8 +173,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b3a",
-    name: "Brown Bread 400g",
-    description: "Soft and healthy, Ideal for breakfast",
+    name: "نان سبوس‌دار ۴۰۰ گرمی",
+    description: "نرم و سالم، مناسب برای صبحانه",
     price: 35,
     originalPrice: 40,
     image:
@@ -193,8 +193,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b36",
-    name: "Barley 1kg",
-    description: "Rich in fiber, Helps digestion",
+    name: "جو ۱ کیلوگرمی",
+    description: "سرشار از فیبر، کمک به هضم",
     price: 140,
     originalPrice: 150,
     image:
@@ -213,8 +213,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b39",
-    name: "Knorr Cup Soup 70g",
-    description: "Convenient and tasty",
+    name: "سوپ لیوانی Knorr ۷۰ گرمی",
+    description: "دلچسب و خوش‌طعم",
     price: 30,
     originalPrice: 35,
     image:
@@ -233,8 +233,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b38",
-    name: "Maggi Noodles 280g",
-    description: "Instant and easy to cook",
+    name: "نودل Maggi ۲۸۰ گرمی",
+    description: "فوری و آسان برای پخت",
     price: 50,
     originalPrice: 55,
     image:
@@ -253,8 +253,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b30",
-    name: "Sprite 1.5L",
-    description: "Chilled and refreshing, Perfect for celebrations",
+    name: "اسپرایت ۱.۵ لیتری",
+    description: "خنک و تازه‌کننده، مناسب مهمانی‌ها",
     price: 60,
     originalPrice: 75,
     image:
@@ -273,9 +273,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b23",
-    name: "Carrot 500g",
-    description:
-      "Sweet and crunchy, Good for eyesight, Ideal for juices and salads",
+    name: "هویج ۵۰۰ گرمی",
+    description: "شیرین و ترد، مفید برای بینایی، مناسب آبمیوه و سالاد",
     price: 44,
     originalPrice: 50,
     image:
@@ -294,8 +293,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b2f",
-    name: "Coca-Cola 1.5L",
-    description: "Perfect for parties and gatherings, Best served chilled",
+    name: "کوکاکولا ۱.۵ لیتری",
+    description: "مناسب مهمانی و دورهمی، بهترین حالت مصرف: خنک",
     price: 75,
     originalPrice: 80,
     image:
@@ -314,8 +313,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b35",
-    name: "Brown Rice 1kg",
-    description: "Whole grain and nutritious",
+    name: "برنج قهوه‌ای ۱ کیلوگرمی",
+    description: "دانه بلند و مغذی",
     price: 110,
     originalPrice: 120,
     image:
@@ -334,8 +333,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b2d",
-    name: "Eggs 12 pcs",
-    description: "Farm fresh, Rich in protein, Ideal for breakfast and baking",
+    name: "تخم‌مرغ ۱۲ عددی",
+    description: "تازه مزرعه، سرشار از پروتئین، مناسب صبحانه و پخت",
     price: 85,
     originalPrice: 90,
     image:
@@ -354,9 +353,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b28",
-    name: "Banana 1 kg",
-    description:
-      "Sweet and ripe, High in potassium, Great for smoothies and snacking",
+    name: "موز ۱ کیلوگرمی",
+    description: "شیرین و رسیده، سرشار از پتاسیم، مناسب اسموتی و میان‌وعده",
     price: 45,
     originalPrice: 50,
     image:
@@ -375,8 +373,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b33",
-    name: "Basmati Rice 5kg",
-    description: "Long grain and aromatic, Perfect for biryani",
+    name: "برنج باسماتی ۵ کیلوگرمی",
+    description: "دانه بلند و معطر، مناسب برای بریانی",
     price: 520,
     originalPrice: 550,
     image:
@@ -395,8 +393,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b25",
-    name: "Onion 500g",
-    description: "Fresh and pungent, Perfect for cooking, A kitchen staple",
+    name: "پیاز ۵۰۰ گرمی",
+    description: "تازه و تند، مناسب پخت‌وپز، یکی از ملزومات آشپزخانه",
     price: 45,
     originalPrice: 50,
     image:
@@ -415,8 +413,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b31",
-    name: "7 Up 1.5L",
-    description: "Refreshing lemon-lime flavor",
+    name: "سون‌آپ ۱.۵ لیتری",
+    description: "طعم لیمویی تازه و خنک",
     price: 70,
     originalPrice: 76,
     image:
@@ -435,8 +433,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b24",
-    name: "Spinach 500g",
-    description: "Rich in iron, High in vitamins, Perfect for soups and salads",
+    name: "اسفناج ۵۰۰ گرمی",
+    description: "سرشار از آهن و ویتامین‌ها، مناسب سوپ و سالاد",
     price: 15,
     originalPrice: 18,
     image:
@@ -455,9 +453,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b27",
-    name: "Orange 1 kg",
-    description:
-      "Juicy and sweet, Rich in Vitamin C, Perfect for juices and salads",
+    name: "پرتقال ۱ کیلوگرمی",
+    description: "آبدار و شیرین، سرشار از ویتامین C، مناسب آبمیوه و سالاد",
     price: 75,
     originalPrice: 80,
     image:
@@ -476,8 +473,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b34",
-    name: "Wheat Flour 5kg",
-    description: "Soft and fluffy rotis, Rich in nutrients",
+    name: "آرد گندم ۵ کیلوگرمی",
+    description: "مناسب نان نرم و سبک، غنی از مواد مغذی",
     price: 230,
     originalPrice: 250,
     image:
@@ -496,9 +493,9 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b2a",
-    name: "Grapes 500g",
+    name: "انگور ۵۰۰ گرمی",
     description:
-      "Fresh and juicy, Rich in antioxidants, Perfect for snacking and fruit salads",
+      "تازه و آبدار، سرشار از آنتی‌اکسیدان، مناسب میان‌وعده و سالاد میوه",
     price: 65,
     originalPrice: 70,
     image:
@@ -517,8 +514,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b32",
-    name: "Fanta 1.5L",
-    description: "Sweet and fizzy",
+    name: "فانتا ۱.۵ لیتری",
+    description: "شیرین و گازدار",
     price: 65,
     originalPrice: 70,
     image:
@@ -537,9 +534,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b2c",
-    name: "Paneer 200g",
-    description:
-      "Soft and fresh, Rich in protein, Ideal for curries and snacks",
+    name: "پنیر ۲۰۰ گرمی",
+    description: "نرم و تازه، سرشار از پروتئین، مناسب غذاها و میان‌وعده",
     price: 85,
     originalPrice: 90,
     image:
@@ -558,9 +554,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b29",
-    name: "Mango 1 kg",
-    description:
-      "Sweet and flavorful, Perfect for smoothies and desserts, Rich in Vitamin A",
+    name: "انبه ۱ کیلوگرمی",
+    description: "شیرین و خوش‌طعم، مناسب اسموتی و دسر، سرشار از ویتامین A",
     price: 140,
     originalPrice: 150,
     image:
@@ -579,9 +574,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b22",
-    name: "Tomato 1 kg",
-    description:
-      "Juicy and ripe, Rich in Vitamin C, Perfect for salads and sauces, Farm fresh quality",
+    name: "گوجه‌فرنگی ۱ کیلوگرمی",
+    description: "آبدار و رسیده، سرشار از ویتامین C، مناسب سالاد و سس",
     price: 28,
     originalPrice: 30,
     image:
@@ -600,9 +594,9 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b21",
-    name: "Potato 500g",
+    name: "سیب‌زمینی ۵۰۰ گرمی",
     description:
-      "Fresh and organic, Rich in carbohydrates, Ideal for curries and fries",
+      "تازه و ارگانیک، سرشار از کربوهیدرات، مناسب انواع غذا و سرخ‌کردنی",
     price: 35,
     originalPrice: 40,
     image:
@@ -621,9 +615,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b2e",
-    name: "Cheese 200g",
-    description:
-      "Creamy and delicious, Perfect for pizzas and sandwiches, Rich in calcium",
+    name: "پنیر ۲۰۰ گرمی",
+    description: "خامه‌ای و خوشمزه، مناسب پیتزا و ساندویچ، سرشار از کلسیم",
     price: 130,
     originalPrice: 140,
     image:
@@ -642,8 +635,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b2b",
-    name: "Amul Milk 1L",
-    description: "Fresh milk, Rich in calcium",
+    name: "شیر Amul یک لیتری",
+    description: "شیر تازه، سرشار از کلسیم",
     price: 55,
     originalPrice: 60,
     image:
@@ -662,8 +655,8 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b26",
-    name: "Apple 1 kg",
-    description: "Boosts immunity, Rich in fiber",
+    name: "سیب ۱ کیلوگرمی",
+    description: "تقویت‌کننده سیستم ایمنی، سرشار از فیبر",
     price: 90,
     originalPrice: 100,
     image:
