@@ -29,18 +29,18 @@ export const assets = {
 export const categoriesData = [
   {
     slug: "fruits-vegetables",
-    name: "Fruits & Vegetables",
+    name: "میوه و سبزیجات",
     image: fruits_vegetables,
   },
-  { slug: "personal-care", name: "Personal Care", image: personal_care },
-  { slug: "pantry-staples", name: "Pantry Staples", image: pantry_staples },
-  { slug: "bakery", name: "Bakery", image: bakery },
-  { slug: "beverages", name: "Beverages", image: drinks },
-  { slug: "meat-seafood", name: "Meat & Seafood", image: meat_seafood },
-  { slug: "snacks", name: "Snacks", image: snacks },
-  { slug: "frozen-foods", name: "Frozen Foods", image: frozen_foods },
-  { slug: "baby-care", name: "Baby Care", image: baby_care },
-  { slug: "dairy-eggs", name: "Dairy & Eggs", image: dairy_eggs },
+  { slug: "personal-care", name: "محصولات بهداشتی", image: personal_care },
+  { slug: "pantry-staples", name: "آذوقه", image: pantry_staples },
+  { slug: "bakery", name: "نانوایی", image: bakery },
+  { slug: "beverages", name: "نوشیدنی‌ها", image: drinks },
+  { slug: "meat-seafood", name: "گوشت و غذاهای دریایی", image: meat_seafood },
+  { slug: "snacks", name: "تنقلات", image: snacks },
+  { slug: "frozen-foods", name: "مواد غذایی منجمد", image: frozen_foods },
+  { slug: "baby-care", name: "محصولات کودک", image: baby_care },
+  { slug: "dairy-eggs", name: "لبنیات و تخم‌مرغ", image: dairy_eggs },
 ];
 
 export const heroSectionData = {
@@ -48,10 +48,14 @@ export const heroSectionData = {
     "مواد غذایی تازه و ارگانیک از مزارع محلی به درب منزل شما تحویل داده می‌شود. کیفیتی که می‌توانید بچشید، لذتی که شایسته آن هستید.",
   hero_image: hero_bg,
   hero_features: [
-    { icon: TruckIcon, title: "Free Delivery", desc: "Orders over $20" },
-    { icon: LeafIcon, title: "100% Organic", desc: "Certified products" },
-    { icon: ClockIcon, title: "Same Day", desc: "Express delivery" },
-    { icon: ShieldCheckIcon, title: "Secure Pay", desc: "Safe checkout" },
+    {
+      icon: TruckIcon,
+      title: "ارسال رایگان",
+      desc: "سفارش‌های بالای ۵۰۰ هزار تومن",
+    },
+    { icon: LeafIcon, title: "کاملا ارگانیک", desc: "دارای تاییدیه" },
+    { icon: ClockIcon, title: "همان روز", desc: "ارسال سریع" },
+    { icon: ShieldCheckIcon, title: "پرداخت امن", desc: "خرید امن" },
   ],
 };
 
