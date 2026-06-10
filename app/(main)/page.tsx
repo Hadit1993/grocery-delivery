@@ -1,6 +1,7 @@
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import HomeCategories from "../components/home/HomeCategories";
+import Newsletter from "../components/home/Newsletter";
 import PopularProducts from "../components/home/PopularProducts";
 import PromotionBanner from "../components/home/PromotionBanner";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeCategories />
       <PopularProducts />
       <PromotionBanner />
+      <Newsletter />
     </div>
   );
 }
