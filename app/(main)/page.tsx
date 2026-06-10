@@ -2,6 +2,7 @@ import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import HomeCategories from "../components/home/HomeCategories";
 import PopularProducts from "../components/home/PopularProducts";
+import PromotionBanner from "../components/home/PromotionBanner";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Features />
       <HomeCategories />
       <PopularProducts />
+      <PromotionBanner />
     </div>
   );
 }

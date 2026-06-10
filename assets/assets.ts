@@ -63,9 +63,9 @@ export const deliveryPartnerLoginImage =
   "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200";
 
 export const appPromoBannerData = {
-  title: "Get fresh groceries in minutes",
+  title: "محصولات تازه را در عرض چند دقیقه دریافت کنید",
   description:
-    "Download the Instacart app for exclusive deals, real-time tracking, and the freshest selection delivered right to your door.",
+    "برای دریافت پیشنهادهای ویژه، ردیابی لحظه‌ای و دریافت جدیدترین محصولات درب منزل، اپلیکیشن تازه‌بار را دانلود کنید.",
 };
 
 export const footerData = {
