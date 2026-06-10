@@ -1,4 +1,5 @@
 import Banner from "../components/shared/Banner";
+import Footer from "../components/shared/Footer";
 import NavBar from "../components/shared/Navbar";
 
 export default function MainLayout({
@@ -11,7 +12,7 @@ export default function MainLayout({
       <Banner />
       <NavBar />
       <main className="min-h-screen">{children}</main>
-      <footer>footer</footer>
+      <Footer />
       <p>Cart SideBar</p>
     </>
   );

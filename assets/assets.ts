@@ -70,9 +70,9 @@ export const appPromoBannerData = {
 
 export const footerData = {
   brand: {
-    name: "Instacart",
+    name: "زودبار",
     description:
-      "Bringing fresh, organic groceries straight from local farms to your doorstep. Nourish your home with Earth's finest.",
+      "ارائه مواد غذایی تازه و ارگانیک، مستقیم از مزارع محلی تا درب منزل شما. خانه‌تان را با بهترین‌های طبیعت غنی کنید.",
     socials: [
       { icon: SiFacebook, link: "#" },
       { icon: SiX, link: "#" },
@@ -82,36 +82,39 @@ export const footerData = {
 
   sections: [
     {
-      title: "Quick Links",
+      title: "دسترسی سریع",
       links: [
-        { label: "All Products", to: "/products" },
-        { label: "Flash Deals", to: "/deals" },
-        { label: "Track Order", to: "/orders" },
-        { label: "Delivery Partner", to: "/delivery" },
+        { label: "همه محصولات", to: "/products" },
+        { label: "پیشنهادهای ویژه", to: "/deals" },
+        { label: "پیگیری سفارش", to: "/orders" },
+        { label: "همکاری در ارسال", to: "/delivery" },
       ],
     },
     {
-      title: "Customer Service",
+      title: "خدمات مشتریان",
       links: [
-        { label: "My Account", to: "#" },
-        { label: "Order History", to: "#" },
-        { label: "Addresses", to: "#" },
-        { label: "Help Center", href: "#" },
+        { label: "حساب کاربری من", to: "#" },
+        { label: "تاریخچه سفارش‌ها", to: "#" },
+        { label: "آدرس‌ها", to: "#" },
+        { label: "مرکز راهنمایی", href: "#" },
       ],
     },
   ],
 
   contact: [
-    { icon: MapPinIcon, text: "123 Green Valley Rd, Portland" },
-    { icon: PhoneIcon, text: "+1 (111) 123-4567" },
-    { icon: MailIcon, text: "hello@example.com" },
+    {
+      icon: MapPinIcon,
+      text: "تهران، سعادت‌آباد، خیابان سرو غربی، کوچه نرگس، پلاک ۲۴، واحد ۵، طبقه دوم",
+    },
+    { icon: PhoneIcon, text: "02133457890" },
+    { icon: MailIcon, text: "zoodbar@gmail.com" },
   ],
 
   bottom: {
-    copyright: "© 2026 Greatstack. All rights reserved.",
+    copyright: "© ۲۰۲۶ . تمامی حقوق محفوظ است.",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "شرایط استفاده", href: "#" },
+      { label: "حریم خصوصی", href: "#" },
     ],
   },
 };
