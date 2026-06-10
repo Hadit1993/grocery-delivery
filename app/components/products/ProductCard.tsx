@@ -1,5 +1,4 @@
 import { CURRENCY_SYMBOLE } from "@/app/constants";
-import { toPersianDigits } from "@/app/utilities/numberFormatter";
 import { ProductCardProps } from "@/types";
 import { Plus, Star } from "lucide-react";
 import Image from "next/image";
@@ -33,34 +32,32 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className=" absolute top-3 left-3 flex flex-wrap gap-1.5">
           {discount > 0 && (
             <span className="px-2 py-0.5 text-[10px] font-semibold bg-app-orange text-white rounded-full">
-              {toPersianDigits(discount)}% تخفیف
+              {discount}% تخفیف
             </span>
           )}
         </div>
       </div>
       <div className="p-3.5 text-zinc-700">
-        <h3 className="text-sm leading-snug mb-1.5 line-clamp-2">
-          {toPersianDigits(name)}
-        </h3>
+        <h3 className="text-sm leading-snug mb-1.5 line-clamp-2">{name}</h3>
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-2">
             <Star className="size-3 text-app-warning fill-app-warning" />
             <span className=" text-xs font-medium text-app-text">
-              {toPersianDigits(product.rating)}
+              {product.rating}
             </span>
             <span className=" text-xs text-app-text-light">
-              ({toPersianDigits(reviewCount)})
+              ({reviewCount})
             </span>
           </div>
         )}
         <div className=" flex items-center justify-between">
           <div className=" flex items-center gap-1 truncate">
-            <span className="text-[14px] font-medium">{`${toPersianDigits(Number(price * 1000).toLocaleString("fa-IR"))} ${CURRENCY_SYMBOLE}`}</span>
+            <span className="text-[14px] font-medium">{`${Number(price * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
             <span className=" text-[9px] text-app-text-light block">
-              {toPersianDigits(product.unit)}/
+              {product.unit}/
             </span>
             {originalPrice > price && (
-              <span className=" text-[9px] text-app-text-light line-through ml-1.5">{`${toPersianDigits(Number(originalPrice * 1000).toLocaleString("fa-IR"))} ${CURRENCY_SYMBOLE}`}</span>
+              <span className=" text-[9px] text-app-text-light line-through ml-1.5">{`${Number(originalPrice * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
             )}
           </div>
           <button
