@@ -97,3 +97,39 @@ export interface LoginFormType {
 export interface ProductCardProps {
   product: Product;
 }
+
+export interface CartContextType {
+  items: CartItem[];
+  cartCount: number;
+  cartTotal: number;
+  isCartOpen: boolean;
+  addToCart: (product: Product, quantity?: number) => void;
+  removeFromCart: (productId: string) => void;
+  updateQuantity: (productId: string, quantity: number) => void;
+  clearCart: () => void;
+  setCartOpen: (open: boolean) => void;
+}
+
+export type CartActionType =
+  | "ADD_TO_CART"
+  | "REMOVE_FROM_CART"
+  | "UPDATE_QUANTITY"
+  | "CLEAR_CART"
+  | "SET_CART_OPEN";
+
+export interface CardActionPayload {
+  product?: Product;
+  quantity?: number;
+  productId?: string;
+  open?: boolean;
+}
+
+export interface CartState {
+  items: CartItem[];
+  isCartOpen: boolean;
+}
+
+export interface ActionType<T, P> {
+  type: T;
+  payload?: P;
+}

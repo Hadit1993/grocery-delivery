@@ -1,3 +1,5 @@
+"use client";
+
 import { BANNER_VISIBILITY_KEY } from "../constants";
 
 export function isBannerDismissed() {
