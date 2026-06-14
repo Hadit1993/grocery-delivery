@@ -1,28 +1,15 @@
 "use client";
 
+import { AnimatePresence } from "framer-motion";
 import { CURRENCY_SYMBOLE } from "@/app/constants";
 import { useCart } from "@/app/contexts/CartContext";
 import clsx from "clsx";
-import {
-  ArrowRightIcon,
-  MinusIcon,
-  PlusIcon,
-  ShoppingBagIcon,
-  Trash2Icon,
-  XIcon,
-} from "lucide-react";
-import Image from "next/image";
+import { ArrowRightIcon, ShoppingBagIcon, XIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+import CartItemComponent from "../cart/CartItemComponent";
 
 export default function CartSidebar() {
-  const {
-    items,
-    updateQuantity,
-    removeFromCart,
-    cartTotal,
-    isCartOpen,
-    setCartOpen,
-  } = useCart();
+  const { items, cartTotal, isCartOpen, setCartOpen } = useCart();
   const router = useRouter();
   const deliveryFee = cartTotal * 1000 > 500000 ? 0 : 50000;
   const grandTotal = cartTotal * 1000 + deliveryFee;
@@ -70,59 +57,11 @@ export default function CartSidebar() {
               </h3>
             </div>
           ) : (
-            items.map(
-              ({ product: { _id, image, name, unit, price }, quantity }) => (
-                <div
-                  key={_id}
-                  className="flex gap-3 bg-app-cream/60 rounded-xl p-3"
-                >
-                  <Image
-                    src={image}
-                    alt={name}
-                    width={432}
-                    height={432}
-                    className="size-16 rounded-lg object-cover shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-semibold truncate">{name}</h4>
-                    <p className="text-xs text-app-text-light">
-                      {`${Number(price * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}{" "}
-                      / {unit}
-                    </p>
-                    <div className="flex items-center justify-between mt-2">
-                      <div className="flex items-center gap-1.5">
-                        <button
-                          onClick={() => updateQuantity(_id, quantity - 1)}
-                          className="size-7 rounded-lg bg-white border border-app-border flex-center"
-                        >
-                          <MinusIcon className="size-3" />
-                        </button>
-                        <span className="text-sm font-semibold w-6 text-center">
-                          {quantity}
-                        </span>
-                        <button
-                          onClick={() => updateQuantity(_id, quantity + 1)}
-                          className="size-7 rounded-lg bg-white border border-app-border flex-center"
-                        >
-                          <PlusIcon className="size-3" />
-                        </button>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold">
-                          {`${Number(price * quantity * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}
-                        </span>
-                        <button
-                          onClick={() => removeFromCart(_id)}
-                          className="p-1 text-app-text-light hover:text-app-error transition-colors"
-                        >
-                          <Trash2Icon className="size-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ),
-            )
+            <AnimatePresence>
+              {items.map((item) => (
+                <CartItemComponent key={item.product._id} cartItem={item} />
+              ))}
+            </AnimatePresence>
           )}
         </div>
         {items.length > 0 && (
@@ -149,7 +88,7 @@ export default function CartSidebar() {
                 ارسال رایگان برای سفارش‌ّهای بالای ۵۰۰‌هزار تومان
               </p>
             )}
-            <div className="flex justify-between text-base font-semibold border-t border-app-border p-3">
+            <div className="flex justify-between text-base font-semibold border-t border-app-border py-3">
               <span>مبلغ نهایی</span>
               <span>{`${Number(grandTotal).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
             </div>
@@ -161,7 +100,7 @@ export default function CartSidebar() {
               className="w-full py-3 bg-app-orange text-white font-semibold rounded-xl hover:bg-app-orange-dark
              transition-colors flex-center gap-2 active:scale-98"
             >
-              تکمیل سفارش <ArrowRightIcon className="size-4" />
+              <ArrowRightIcon className="size-4" /> تکمیل سفارش
             </button>
           </div>
         )}

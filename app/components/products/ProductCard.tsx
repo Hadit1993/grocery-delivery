@@ -1,8 +1,9 @@
 import { CURRENCY_SYMBOLE } from "@/app/constants";
 import { ProductCardProps } from "@/types";
-import { Plus, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ProductCardAddtoCartButton from "./ProductCardAddtoCartButton";
 
 export default function ProductCard({ product }: ProductCardProps) {
   const {
@@ -60,15 +61,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               <span className=" text-[9px] text-app-text-light line-through ml-1.5">{`${Number(originalPrice * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
             )}
           </div>
-          <button
-            // onClick={(e) => {
-            //   e.stopPropagation();
-            // }}
-            className="size-7 rounded-full bg-app-orange text-white flex-center shrink-0 hover:bg-app-orange-dark
-          transition-colors active:scale-95"
-          >
-            <Plus className="size-3.5" />
-          </button>
+          <ProductCardAddtoCartButton product={product} />
         </div>
       </div>
     </Link>

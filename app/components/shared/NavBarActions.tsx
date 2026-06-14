@@ -1,5 +1,6 @@
 "use client";
 
+import { useCart } from "@/app/contexts/CartContext";
 import {
   ArrowUpRightIcon,
   ChevronDownIcon,
@@ -17,10 +18,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function NavBarActions() {
-  const [cartCount, setCartCount] = useState(1);
-  const [isCartOpen, setCartOpen] = useState(false);
   const [isUserMenuOpen, setUserMenuOpen] = useState(false);
   const router = useRouter();
+  const { cartCount, setCartOpen } = useCart();
   const user = { name: "Hadi", email: "hadi@example.com", isAdmin: true };
 
   const handleLogOut = () => {
@@ -30,7 +30,13 @@ export default function NavBarActions() {
 
   return (
     <div className="flex items-center gap-3">
-      <button className=" relative p-2 rounded-xl">
+      <button
+        className=" relative p-2 rounded-xl"
+        onClick={(e) => {
+          e.stopPropagation();
+          setCartOpen(true);
+        }}
+      >
         <ShoppingCartIcon className=" size-5 text-zinc-900" />
         {cartCount > 0 && (
           <span

@@ -12,6 +12,7 @@
     "@icons-pack/react-simple-icons": "^13.13.0",
     "@tailwindcss/postcss": "^4.3.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.40.0",
     "immer": "^11.1.8",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.17.0",
