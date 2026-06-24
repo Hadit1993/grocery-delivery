@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image";
+import { ReadonlyURLSearchParams } from "next/navigation";
+
 export interface User {
   _id: string;
   name: string;
@@ -25,7 +28,7 @@ export interface Address {
 export interface Category {
   slug: string;
   name: string;
-  image: string;
+  image?: StaticImageData;
 }
 
 export interface Product {
@@ -132,4 +135,12 @@ export interface CartState {
 export interface ActionType<T, P> {
   type: T;
   payload?: P;
+}
+
+export interface ProductFilterContextType {
+  searchParams: ReadonlyURLSearchParams;
+  isMobileFiltersOpen: boolean;
+  setMobileFiltersOpen: (open: boolean) => void;
+  updateFilters: (filters: Record<string, string>) => void;
+  deleteFilters: () => void;
 }

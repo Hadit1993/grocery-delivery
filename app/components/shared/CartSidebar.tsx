@@ -14,8 +14,6 @@ export default function CartSidebar() {
   const deliveryFee = cartTotal * 1000 > 500000 ? 0 : 50000;
   const grandTotal = cartTotal * 1000 + deliveryFee;
 
-  // if (!isCartOpen) return null;
-
   return (
     <>
       <div

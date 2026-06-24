@@ -40,18 +40,8 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
       <div className="p-3.5 text-zinc-700">
         <h3 className="text-sm leading-snug mb-1.5 line-clamp-2">{name}</h3>
-        {rating > 0 && (
-          <div className="flex items-center gap-1 mb-2">
-            <Star className="size-3 text-app-warning fill-app-warning" />
-            <span className=" text-xs font-medium text-app-text">
-              {product.rating}
-            </span>
-            <span className=" text-xs text-app-text-light">
-              ({reviewCount})
-            </span>
-          </div>
-        )}
-        <div className=" flex items-center justify-between">
+
+        <div className=" flex items-center justify-between mb-2">
           <div className=" flex items-center gap-1 truncate">
             <span className="text-[14px] font-medium">{`${Number(price * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
             <span className=" text-[9px] text-app-text-light block">
@@ -61,8 +51,19 @@ export default function ProductCard({ product }: ProductCardProps) {
               <span className=" text-[9px] text-app-text-light line-through ml-1.5">{`${Number(originalPrice * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
             )}
           </div>
-          <ProductCardAddtoCartButton product={product} />
         </div>
+        {rating > 0 && (
+          <div className="flex items-center gap-1">
+            <Star className="size-3 text-app-warning fill-app-warning" />
+            <span className=" text-xs font-medium text-app-text">
+              {product.rating}
+            </span>
+            <span className=" text-xs text-app-text-light ml-auto">
+              ({reviewCount})
+            </span>
+            <ProductCardAddtoCartButton product={product} />
+          </div>
+        )}
       </div>
     </Link>
   );
