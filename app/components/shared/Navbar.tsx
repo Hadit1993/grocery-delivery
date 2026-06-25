@@ -15,7 +15,7 @@ export default function NavBar() {
             <Link href="/">خانه</Link>
             <Link href="/products">محصولات</Link>
             <Link href="/deals" className=" text-app-orange">
-              حراجی‌ها
+              تخفیف‌ها
             </Link>
           </div>
         </div>

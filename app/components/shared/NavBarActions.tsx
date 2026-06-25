@@ -124,7 +124,7 @@ export default function NavBarActions() {
                 </Link>
                 <Link href="/deals" className="dropdown-link md:hidden">
                   <ArrowUpRightIcon size={16} />
-                  حراجی‌ها
+                  تخفیف‌ها
                 </Link>
                 {user?.isAdmin && (
                   <Link href="/admin/products" className="dropdown-link">
