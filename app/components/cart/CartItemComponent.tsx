@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { CURRENCY_SYMBOLE } from "@/app/constants";
 import { useCart } from "@/app/contexts/CartContext";
 import { CartItem } from "@/types";
 import { MinusIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import Image from "next/image";
+import { formatPrice } from "@/app/utilities/numberFormatter";
 
 export default function CartItemComponent({
   cartItem: {
-    product: { _id, image, name, unit, price },
+    product: { _id, image, name, price },
     quantity,
   },
 }: {
@@ -34,10 +34,7 @@ export default function CartItemComponent({
         />
         <div className="flex-1 min-w-0">
           <h4 className="text-sm font-semibold truncate">{name}</h4>
-          <p className="text-xs text-app-text-light">
-            {`${Number(price * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}{" "}
-            / {unit}
-          </p>
+          <p className="text-xs text-app-text-light">{formatPrice(price)}</p>
           <div className="flex items-center justify-between mt-2">
             <div className="flex items-center gap-1.5">
               <button
@@ -58,7 +55,7 @@ export default function CartItemComponent({
             </div>
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold">
-                {`${Number(price * quantity * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}
+                {formatPrice(price * quantity)}
               </span>
               <button
                 onClick={() => removeFromCart(_id)}

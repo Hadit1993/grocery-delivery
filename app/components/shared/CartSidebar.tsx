@@ -1,18 +1,18 @@
 "use client";
 
 import { AnimatePresence } from "framer-motion";
-import { CURRENCY_SYMBOLE } from "@/app/constants";
 import { useCart } from "@/app/contexts/CartContext";
 import clsx from "clsx";
 import { ArrowRightIcon, ShoppingBagIcon, XIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import CartItemComponent from "../cart/CartItemComponent";
+import { formatPrice } from "@/app/utilities/numberFormatter";
 
 export default function CartSidebar() {
   const { items, cartTotal, isCartOpen, setCartOpen } = useCart();
   const router = useRouter();
-  const deliveryFee = cartTotal * 1000 > 500000 ? 0 : 50000;
-  const grandTotal = cartTotal * 1000 + deliveryFee;
+  const deliveryFee = cartTotal > 500 ? 0 : 50;
+  const grandTotal = cartTotal + deliveryFee;
 
   return (
     <>
@@ -66,10 +66,7 @@ export default function CartSidebar() {
           <div className="p-5 border-t border-app-border space-y-3">
             <div className="flex justify-between text-sm">
               <span className="text-app-text-light">مبلغ کل</span>
-              <span className="font-medium">
-                {" "}
-                {`${Number(cartTotal * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}
-              </span>
+              <span className="font-medium">{formatPrice(cartTotal)}</span>
             </div>
             <div className="flex justify-between text-sm">
               <span className="text-app-text-light">هزینه ارسال</span>
@@ -77,7 +74,7 @@ export default function CartSidebar() {
                 {deliveryFee === 0 ? (
                   <span className="text-app-success">رایگان</span>
                 ) : (
-                  `${Number(deliveryFee).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`
+                  formatPrice(deliveryFee)
                 )}
               </span>
             </div>
@@ -88,7 +85,7 @@ export default function CartSidebar() {
             )}
             <div className="flex justify-between text-base font-semibold border-t border-app-border py-3">
               <span>مبلغ نهایی</span>
-              <span>{`${Number(grandTotal).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
+              <span>{formatPrice(grandTotal)}</span>
             </div>
             <button
               onClick={() => {

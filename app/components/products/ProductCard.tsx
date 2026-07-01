@@ -1,9 +1,9 @@
-import { CURRENCY_SYMBOLE } from "@/app/constants";
 import { ProductCardProps } from "@/types";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import ProductCardAddtoCartButton from "./ProductCardAddtoCartButton";
+import { formatPrice } from "@/app/utilities/numberFormatter";
 
 export default function ProductCard({ product }: ProductCardProps) {
   const {
@@ -43,12 +43,16 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <div className=" flex items-center justify-between mb-2">
           <div className=" flex items-center gap-1 truncate">
-            <span className="text-[14px] font-medium">{`${Number(price * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
+            <span className="text-[14px] font-medium">
+              {formatPrice(price)}
+            </span>
             <span className=" text-[9px] text-app-text-light block">
               {product.unit}/
             </span>
             {originalPrice > price && (
-              <span className=" text-[9px] text-app-text-light line-through ml-1.5">{`${Number(originalPrice * 1000).toLocaleString("fa-IR")} ${CURRENCY_SYMBOLE}`}</span>
+              <span className=" text-[9px] text-app-text-light line-through ml-1.5">
+                {formatPrice(originalPrice)}
+              </span>
             )}
           </div>
         </div>
